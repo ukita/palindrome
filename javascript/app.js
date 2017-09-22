@@ -18,7 +18,7 @@ function isPalindrome() {
 }
 
 function formatString(string) {
-  return string.toLowerCase().replace(/\s/g, "");
+  return string.toLowerCase().replace(/\W/g, "");
 }
 
 function reverseString(string) {
