@@ -2,7 +2,7 @@ const input    = document.querySelector('#sentece');
 const elResult = document.querySelector('#result');
 
 function isPalindrome() {
-  const string = this.value.replace(/\s/g, "");
+  const string = formatString(this.value);
   const reversedString = reverseString(string);
   let result;
 
@@ -15,6 +15,10 @@ function isPalindrome() {
   if (string.length === 0) result = "";
 
   elResult.innerHTML = result;
+}
+
+function formatString(string) {
+  return string.toLowerCase().replace(/\s/g, "");
 }
 
 function reverseString(string) {
